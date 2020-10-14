@@ -18,7 +18,7 @@ func Gerar()*cli.App {
 		Name: "host",
 		Value: "devbook.com.br",
 	},
-},
+}
 
   app.Commands = []cli.Command{
 	  {
@@ -26,14 +26,14 @@ func Gerar()*cli.App {
 		  Usage: "Busca Ips de endereços na internet",
 		  Flags: flags,
 		  Action: buscarIps,
-	  }
+	  },
 	  
 	  {
 		  Name: "servidores",
 		  Usage: "Buscar Servidores",
 		  Flags: flags,
 		  Action: buscarServidores,
-	  }
+	  },
   }
   return app
 }
@@ -60,7 +60,7 @@ func buscarServidores(c *cli.Context){
 		log.Fatal(erro)
 	}
 
-	for _, servidore  := range servidores {
+	for _, servidores  := range servidores {
 		fmt.Println(servidores)
 	}
 }
